@@ -15,7 +15,7 @@ func NewCompanyService(r interfaces.CompanyRepository) *CompanyService {
 	}
 }
 
-func (s *CompanyService) CreateProduct(data CompanyDTO) (models.Company, error) {
+func (s *CompanyService) CreateCompany(data CompanyDTO) (models.Company, error) {
 	comp := models.NewCompany(data.Name, data.Location)
 
 	return s.repository.CreateCompany(*comp)
@@ -24,7 +24,7 @@ func (s *CompanyService) CreateProduct(data CompanyDTO) (models.Company, error) 
 func (s *CompanyService) UpdateCompany(data CompanyDTO) error {
 	comp := models.NewCompanyWithID(data.ID, data.Name, data.Location)
 
-	err := s.repository.UpdateCompanyById(*comp)
+	err := s.repository.UpdateCompany(*comp)
 
 	if err != nil {
 		return err

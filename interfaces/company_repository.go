@@ -7,5 +7,5 @@ type CompanyRepository interface {
 	CreateCompany(c models.Company) (models.Company, error)
 	GetCompanyById(id int) (models.Company, error)
 	DeleteCompanyById(id int) (models.Company, error)
-	UpdateCompanyById(c models.Company) error
+	UpdateCompany(c models.Company) error
 }
