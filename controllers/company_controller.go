@@ -50,7 +50,7 @@ func Create(c *gin.Context) {
 		return
 	}
 
-	result, err := service.CreateProduct(dto)
+	result, err := service.CreateCompany(dto)
 	if err != nil {
 		c.JSON(400, gin.H{"error": err.Error()})
 
