@@ -10,7 +10,7 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 
 	comp := router.Group("company")
 	{
-		comp.GET("/", controllers.ShowAll)
+
 		comp.GET("/", controllers.ShowAll)
 		comp.GET("/:id", controllers.Show)
 		comp.POST("/", controllers.Create)

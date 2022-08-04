@@ -41,7 +41,7 @@ func (s *CompanyRepository) GetCompanyById(id int) (models.Company, error) {
 	return c, nil
 }
 
-func (s *CompanyRepository) DeleteCompanyById(id int) (models.Company, error) {
+func (s *CompanyRepository) DeleteCompany(id int) (models.Company, error) {
 	db := database.GetDatabase()
 	n, err := s.GetCompanyById(id)
 	if err != nil {

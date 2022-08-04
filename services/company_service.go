@@ -34,7 +34,7 @@ func (s *CompanyService) UpdateCompany(data CompanyDTO) error {
 }
 
 func (s *CompanyService) DeleteCompany(id int) (models.Company, error) {
-	return s.repository.DeleteCompanyById(id)
+	return s.repository.DeleteCompany(id)
 }
 
 func (s *CompanyService) ShowCompany(id int) (models.Company, error) {

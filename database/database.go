@@ -20,7 +20,8 @@ func StartDatabase() {
 	DbName := config.GetConfig().DatabaseName
 	DbPass := config.GetConfig().DatabasePass
 
-	dsn := fmt.Sprintf("host=%s port=%s user=%s dbname=%s sslmode=%s password=%s", DbHost, DbPort, DbUser, DbName, DbPass)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=True", DbUser, DbPass, DbHost, DbPort, DbName)
+
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {

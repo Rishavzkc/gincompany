@@ -7,8 +7,6 @@ import (
 )
 
 type App struct {
-	ServerHost   string `mapstructure:"host"`
-	ServerPort   string `mapstructure:"port"`
 	DatabaseHost string `mapstructure:"db_host"`
 	DatabasePort string `mapstructure:"db_port"`
 	DatabaseUser string `mapstructure:"db_user"`
