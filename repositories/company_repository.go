@@ -14,7 +14,7 @@ func (s *CompanyRepository) GetAllCompany() ([]models.Company, error) {
 	var c []models.Company
 	err := db.Find(&c).Error
 	if err != nil {
-		return nil, fmt.Errorf("cannot find products: %v", err)
+		return nil, fmt.Errorf("cannot find company: %v", err)
 	}
 
 	return c, err
