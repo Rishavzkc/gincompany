@@ -6,8 +6,9 @@ type Company struct {
 	Location string `json:"location"`
 }
 
-func NewCompany(name string, location string) *Company {
+func NewCompany(id int, name string, location string) *Company {
 	return &Company{
+		ID:       id,
 		Name:     name,
 		Location: location,
 	}

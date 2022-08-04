@@ -16,7 +16,7 @@ func NewCompanyService(r interfaces.CompanyRepository) *CompanyService {
 }
 
 func (s *CompanyService) CreateCompany(data CompanyDTO) (models.Company, error) {
-	comp := models.NewCompany(data.Name, data.Location)
+	comp := models.NewCompany(data.ID, data.Name, data.Location)
 
 	return s.repository.CreateCompany(*comp)
 }
